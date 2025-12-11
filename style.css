@@ -4,28 +4,21 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-body{
-    background-color: white;
-}
 .hero{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px 4%;
-    gap: 20px;
+    position: relative;
+    display: inline-block;
+    height: 100vh;
+    width: 100%;
 }
-.hero-text{
-    flex: 1;
-}
-.hero-text h1{
+.content h1{
     font-size: 48px;
     line-height: 1.2;
     margin-bottom: 20px;
 }
-.hero-text p{
+.content p{
     font-size: 18px;
     margin-bottom: 25px;
-    color: #555;
+    color: white;
 }
 button{
     padding: 12px 25px;
@@ -37,25 +30,30 @@ button{
     margin-bottom: 10px;
 }
 .main{
-    background: #0077ff;
+    background: #a56dff;
     color: #fff;
 }
 .secondary{
     background: #e0e0e0;
 }
-.hero-img img{
-    max-width: 100px;
-    border-radius: 12px;
+.total img{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+.content{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
 }
 @media (max-width: 900px){
     .hero{
-        flex-direction: column;
         text-align: center;
     }
-    .hero-text h1{
-        font-size: 36px;
-    }
-    .hero-img{
-        margin-top: 20px;
+    .content{
+        top: 50%;
     }
 }
